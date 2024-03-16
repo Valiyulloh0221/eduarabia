@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+@font-face {
+  font-family: Khand;
+  src: url(../fonts/Khand-Regular.ttf);
+}
+.taytl{
+  font-family: Khand;
+}
+header{
+  background-color: #14618C;
+  padding: 10px 7%;
+  width: 100%;
+  #navbar-responsive.open {
+    left: 0;
+  }
+  .nav{
+    .menu-btn {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      display: none;
+    }
+    
+    .menu-btn span {
+      display: block;
+      width: 30px;
+      height: 4px;
+      background-color: #000;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: Khand;
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+}
+@media (max-width: 1100px){
+  #navbar-responsive.open {
+    max-width: 950px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #navbar-responsive {
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    transition: 0.5s;
+  }
+  .menu-btn{
+    display: flex !important;
+  }
+}
